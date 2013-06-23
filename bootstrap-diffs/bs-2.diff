@@ -1,0 +1,81 @@
+diff --git a/less/variables.less b/less/variables.less
+index 4fd0d49..fe546d8 100644
+--- a/less/variables.less
++++ b/less/variables.less
+@@ -19,7 +19,7 @@
+ // Brand colors
+ // -------------------------
+ 
+-@brand-primary:         #428bca;
++@brand-primary:         #b5190e;
+ @brand-success:         #5cb85c;
+ @brand-warning:         #f0ad4e;
+ @brand-danger:          #d9534f;
+@@ -28,33 +28,33 @@
+ // Scaffolding
+ // -------------------------
+ 
+-@body-bg:               #fff;
+-@text-color:            @gray-dark;
++@body-bg:               #fbf3e8;
++@text-color:            #5c493d;
+ 
+ // Links
+ // -------------------------
+ 
+ @link-color:            @brand-primary;
+-@link-hover-color:      darken(@link-color, 15%);
++@link-hover-color:      darken(@link-color, 8%);
+ 
+ // Typography
+ // -------------------------
+ 
+ @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
++@font-family-serif:       "Merriweather", Georgia, serif;
+ @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+-@font-family-base:        @font-family-sans-serif;
++@font-family-base:        @font-family-serif;
+ 
+-@font-size-base:          14px;
++@font-size-base:          16px;
+ @font-size-large:         ceil(@font-size-base * 1.25); // ~18px
+ @font-size-small:         ceil(@font-size-base * 0.85); // ~12px
+ @font-size-mini:          ceil(@font-size-base * 0.75); // ~11px
+ 
+-@line-height-base:        1.428571429; // 20/14
++@line-height-base:        1.5625;
+ @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
+ 
+ @headings-font-family:    @font-family-base;
+-@headings-font-weight:    500;
++@headings-font-weight:    300;
+ @headings-line-height:    1.1;
+ 
+ 
+@@ -168,7 +168,7 @@
+ 
+ // Glyphicons font path
+ // -------------------------
+-@glyphicons-font-path:          "../fonts";
++@glyphicons-font-path:          "../../fonts";
+ 
+ 
+ // Navbar
+@@ -409,13 +409,13 @@
+ // --------------------------------------------------
+ 
+ // Small screen / tablet
+-@container-tablet:          728px;
++@container-tablet:          600px;
+ 
+ // Medium screen / desktop
+-@container-desktop:         940px;
++@container-desktop:         770px;
+ 
+ // Large screen / wide desktop
+-@container-large-desktop:   1170px;
++@container-large-desktop:   960px;
+ 
+ 
+ // Grid system
