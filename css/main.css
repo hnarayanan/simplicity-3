@@ -1,0 +1,25 @@
+body {
+    background-color: #fbf3e8;
+    color: #5c493d;
+    font-family: 'Merriweather', Georgia, serif;
+}
+p, ol {
+    /*font-size: 20px;
+      line-height: 31px;
+      font-weight:300;*/
+    font-size: 16px;
+    line-height: 25px;
+
+}
+a {
+    color: #b5190e;
+}
+
+.container {
+    margin: 80px auto 30px;
+    max-width: 640px;
+    padding: 0 20px;
+}
+.container-narrow > hr {
+    margin: 30px 0;
+}
