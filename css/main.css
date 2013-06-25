@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    margin: 24px auto;
+    margin: 28px auto;
     padding: 0 20px;
 }
 
@@ -22,13 +22,13 @@ body {
       line-height: 28px;
   }
   .container {
-      margin: 30px auto;
+      margin: 32px auto;
   }
   .lead {
       font-size: 25.2px;
   }
   .header-img {
-      margin-top: 36px;
+      margin-top: 40px;
   }
 }
 
