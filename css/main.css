@@ -9,6 +9,7 @@ body {
 
 h1 {
     font-size: 36px;
+    margin-bottom: 6px;
 }
 
 .nav-list {
@@ -24,15 +25,33 @@ address {
     margin-bottom: 20px;
 }
 
+li {
+    padding: 1px;
+}
+
 @media (min-width: 768px) {
     body {
 	font-size: 18px;
 	line-height: 28px;
     }
+    .header {
+	margin-top: 15px;
+    }
     h1 {
 	font-size: 40px;
     }
+    li {
+	padding: 2px;
+    }
     .lead {
 	font-size: 25.2px;
+	margin-bottom: 25px;
+    }
+    p {
+	margin: 0 0 14px;
+    }
+    ul,
+    ol {
+	margin-bottom: 14px;
     }
 }
