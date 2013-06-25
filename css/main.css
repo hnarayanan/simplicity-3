@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    margin: 20px auto;
+    margin: 24px auto;
     padding: 0 20px;
 }
 
@@ -25,10 +25,10 @@ body {
       margin: 30px auto;
   }
   .lead {
-      font-size: 23px;
+      font-size: 25.2px;
   }
   .header-img {
-      margin-top: 30px;
+      margin-top: 36px;
   }
 }
 
@@ -38,7 +38,7 @@ body {
       line-height: 34px;
   }
   .lead {
-      font-size: 28px;
+      font-size: 30px;
   }
 }
 
@@ -48,6 +48,6 @@ body {
       line-height: 44px;
   }
   .lead {
-      font-size: 36px;
+      font-size: 39px;
   }*/
 }
