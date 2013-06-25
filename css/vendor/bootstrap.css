@@ -294,8 +294,8 @@ body {
   font-family: "Merriweather", Georgia, serif;
   font-size: 16px;
   line-height: 1.5625;
-  color: #5c493d;
-  background-color: #fcf5ec;
+  color: #2e251e;
+  background-color: #fffefe;
 }
 
 input,
@@ -344,7 +344,7 @@ p {
 
 .lead {
   margin-bottom: 22.5px;
-  font-size: 21.6px;
+  font-size: 20.8px;
   font-weight: 300;
   line-height: 1.4;
 }
@@ -1138,7 +1138,7 @@ th {
 }
 
 .table .table {
-  background-color: #fcf5ec;
+  background-color: #fffefe;
 }
 
 .table-condensed thead > tr > th,
@@ -1677,7 +1677,7 @@ input[type="color"].input-small {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #a38775;
+  color: #7b6350;
 }
 
 .input-group {
@@ -3325,7 +3325,7 @@ button.close {
 .nav-tabs > li.active > a:focus {
   color: #555555;
   cursor: default;
-  background-color: #fcf5ec;
+  background-color: #fffefe;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
@@ -3351,7 +3351,7 @@ button.close {
 }
 
 .nav-tabs.nav-justified > .active > a {
-  border-bottom-color: #fcf5ec;
+  border-bottom-color: #fffefe;
 }
 
 .nav-pills > li {
@@ -3982,7 +3982,7 @@ button.close {
   display: inline-block;
   padding: 0 5px;
   color: #ccc;
-  content: "\00a0 /";
+  content: "\00a0 \2022";
 }
 
 .breadcrumb > li:last-child:after {
@@ -4608,7 +4608,7 @@ button.close {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.5625;
-  background-color: #fcf5ec;
+  background-color: #fffefe;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -4639,7 +4639,7 @@ a.thumbnail:focus {
 
 .thumbnail .caption {
   padding: 9px;
-  color: #5c493d;
+  color: #2e251e;
 }
 
 .media,
