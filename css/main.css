@@ -13,8 +13,7 @@ h1 {
 }
 
 .nav-list {
-    margin-top: 25px;
-    margin-bottom: 0;
+    margin-top: 14px;
 }
 
 address {
@@ -23,6 +22,10 @@ address {
 
 .header-img {
     margin-bottom: 20px;
+}
+
+.header hr {
+    margin: 12.5px 0 25px;
 }
 
 li {
@@ -39,6 +42,10 @@ li {
     }
     h1 {
 	font-size: 40px;
+    }
+    .nav-list {
+	margin-top: 25px;
+	margin-bottom: 0;
     }
     li {
 	padding: 2px;
