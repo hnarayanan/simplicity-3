@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title></title>
+    <meta name="description" content="">
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700'>
+    <link rel="stylesheet" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div class="container">
+      <h2>Research work</h2>
+
+<p>Accurate and efficient modelling of biomedical flows is of substantial interest because of its immediate applicability to a variety of fields, including the design of medical devices, the planning of surgical procedures and most fundamentally, the scientific understanding of healthy and diseased biological function. The complexity in this problem arises from the fact that physically-interesting flows occur in complex, patient-specific geometries and often occur in conjunction with other physics such as the finite deformation of the vascular walls and biochemical reaction-diffusion processes.</p>
+		<p>The primary aim of our research is the development of a robust computational framework for biomedical flow simulation and apply it to our current problem of interest: understanding how blood flow in an artery affects the formation and growth of <a href="http://en.wikipedia.org/wiki/Aneurysm">aneurysms</a>.</p>
+		<img class="centered-photo" src="/files/images/research/biological-flow/aneurysms.jpg" alt="" title="Different forms of aneurysms" />
+		<p class="caption">Different forms of aneurysms (<a href="http://neuro.wehealny.org/endo/cond_aneurysms.asp">neuro.wehealny.org</a>).</p>
+		<p>Such a problem motivates the need for accurate computation of quantities which are implicated in the growth of aneurysms (such as the shear forces exerted by the blood flow on their vessel walls and the stretch of the arterial walls due to normal pressure). We term these quantities of interest, &#8220;goal quantities.&#8221; Central to computing these quantities accurately are adaptive mesh techniques based on <em>a posteriori</em> error estimates, which rely on estimates of the errors in computed physical goal quantities to determine regions where the error needs to be reduced. These estimates are calculated from the computed solution and the solution of an auxiliary (dual) problem containing information about the stability of the flow equations being solved and the goal quantity expressed as a functional. Briefly, we use the fact that the error in the specified goal functional,</p>
+		<p>
+		  \begin{align}
+		  \mathcal{M}(u_{h}) - \mathcal{M}(u)
+		  & = \mathcal{M}(u_{h} - u)\\
+		  & = a^{*}(z, u_{h} - u)\\
+		  & = a(u_{h} - u, z)\\
+		  & = a(u_{h}, z) - a(u, z)\\
+		  & = a(u_{h}, z) - L(z)\\
+		  & = r(z)
+		  \end{align}
+		</p>
+		<p>is the residual of the dual solution! If you are interested, you can <a href="">listen to a talk</a> I&#8217;ve given about this to better clarify concepts and see how we apply this general theory to equations modelling fluid flow.</p>
+		<p class="center"><object width="520" height="294"><param name="movie" value="http://www.youtube.com/v/X0K37EQZ8f4?version=3&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/X0K37EQZ8f4?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="520" height="294" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+		<p class="caption">Simulated blood flow through the aneurysm.</p>
+		<p>Applying our adaptive scheme to a 2D representation of an aneurysm results in the construction of optimal computational meshes, which allow us to compute quantities related to aneurysm growth to a specified accuracy requirement with minimal computational work. Notice that the optimal mesh changes with the goal of our computation.</p>
+		<img class="centered-photo" src="/files/images/research/biological-flow/adapted-aneurysm-meshes.png" alt="Optimal meshes when optimising for shear and normal stresses" title="Optimal meshes when optimising for shear (top) and normal (bottom) stresses." />
+		<p class="caption">Optimal meshes when optimising for shear (top) and normal (bottom) stresses.</p>
+		<p>Algorithmic and software design lessons learnt from this project have been incorporated into <a href="https://launchpad.net/cbc.solve">CBC.Flow</a>, a Python application written atop the <a href="http://fenicsproject.org/">FEniCS Project</a> and distributed under the GNU GPL. It allows a user to easily pose and solve fluid flow problems with a syntax that is close to our automated hyperelasticity solver, <a href="/research/automated-mechanics/">CBC.Twist</a>.</p>
+		<pre class="sh_python"># Import utility classes from cbc.flow
+from cbc.flow import *
+
+# Define the flow problem
+class Channel(NavierStokes):
+
+    def mesh(self):
+        return UnitSquare(16, 16)
+
+    def viscosity(self):
+        return 1.0 / 8.0
+
+    def velocity_dirichlet_values(self):
+        return [(0, 0)]
+
+    def velocity_dirichlet_boundaries(self):
+        return ["x[1] == 0.0 || x[1] == 1.0"]
+
+    def pressure_dirichlet_values(self):
+        return [1, 0]
+
+    def pressure_dirichlet_boundaries(self):
+        return ["x[0] == 0.0", "x[0] == 1.0"]
+
+    def velocity_initial_condition(self):
+        return (0, 0)
+
+    def pressure_initial_condition(self):
+        return "1 - x[0]"
+
+    def end_time(self):
+        return 0.5
+
+    def __str__(self):
+        return "Pressure-driven flow across a channel"
+
+# Setup and solve problem
+problem = Channel()
+u, p = problem.solve()</pre>
+      <p class="caption">Posing and solving a simple flow problem with <a href="https://launchpad.net/cbc.solve">CBC.Flow</a>.</p>
+      <p class="right"><a href="/research/#areas">Explore my other research areas &#8594;</a></p>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+    <script src="js/vendor/holder.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  </body>
+
+</html>
