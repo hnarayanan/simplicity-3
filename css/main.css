@@ -66,3 +66,12 @@ li {
 	margin-bottom: 14px;
     }
 }
+
+.Collage{
+    padding: 4px;
+}
+
+.Collage img{
+    vertical-align:bottom;
+    opacity:0;
+}
