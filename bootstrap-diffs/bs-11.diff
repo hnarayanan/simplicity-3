@@ -1,3 +1,15 @@
+diff --git a/less/tables.less b/less/tables.less
+index bd86db2..680d291 100644
+--- a/less/tables.less
++++ b/less/tables.less
+@@ -42,6 +42,7 @@ th {
+   thead:first-child {
+     tr:first-child {
+       th, td {
++        font-family: @headings-font-family;
+         border-top: 0;
+       }
+     }
 diff --git a/less/type.less b/less/type.less
 index b0423e9..15295a1 100644
 --- a/less/type.less

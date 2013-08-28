@@ -1425,6 +1425,7 @@ th {
 .table caption + thead tr:first-child td,
 .table colgroup + thead tr:first-child td,
 .table thead:first-child tr:first-child td {
+  font-family: "Lato", sans-serif;
   border-top: 0;
 }
 
@@ -3899,6 +3900,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-tabs.nav-justified > li > a {
+  margin-bottom: 5px;
   text-align: center;
 }
 
@@ -3907,15 +3909,32 @@ textarea.input-group-sm > .input-group-btn > .btn {
     display: table-cell;
     width: 1%;
   }
+  .nav-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
 }
 
 .nav-tabs.nav-justified > li > a {
   margin-right: 0;
-  border-bottom: 1px solid #dddddd;
+  border-radius: 4px;
 }
 
-.nav-tabs.nav-justified > .active > a {
-  border-bottom-color: #fffefe;
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #dddddd;
+}
+
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #dddddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .nav-tabs.nav-justified > .active > a,
+  .nav-tabs.nav-justified > .active > a:hover,
+  .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fffefe;
+  }
 }
 
 .nav-pills > li {
@@ -3955,6 +3974,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-justified > li > a {
+  margin-bottom: 5px;
   text-align: center;
 }
 
@@ -3962,6 +3982,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .nav-justified > li {
     display: table-cell;
     width: 1%;
+  }
+  .nav-justified > li > a {
+    margin-bottom: 0;
   }
 }
 
@@ -3971,11 +3994,25 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .nav-tabs-justified > li > a {
   margin-right: 0;
-  border-bottom: 1px solid #dddddd;
+  border-radius: 4px;
 }
 
-.nav-tabs-justified > .active > a {
-  border-bottom-color: #fffefe;
+.nav-tabs-justified > .active > a,
+.nav-tabs-justified > .active > a:hover,
+.nav-tabs-justified > .active > a:focus {
+  border: 1px solid #dddddd;
+}
+
+@media (min-width: 768px) {
+  .nav-tabs-justified > li > a {
+    border-bottom: 1px solid #dddddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .nav-tabs-justified > .active > a,
+  .nav-tabs-justified > .active > a:hover,
+  .nav-tabs-justified > .active > a:focus {
+    border-bottom-color: #fffefe;
+  }
 }
 
 .tabbable:before,
@@ -4974,6 +5011,7 @@ a.list-group-item.active > .badge,
   height: auto;
   max-width: 100%;
   padding: 4px;
+  margin-bottom: 44px;
   line-height: 1.6;
   background-color: #fffefe;
   border: 1px solid #dddddd;
