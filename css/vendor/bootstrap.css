@@ -383,7 +383,7 @@ p {
 
 .lead {
   margin-bottom: 39.6px;
-  font-size: 39.199999999999996px;
+  font-size: 39px;
   font-weight: 300;
   line-height: 1.4;
 }
@@ -5723,12 +5723,6 @@ button.close {
 
 .modal-open {
   overflow: hidden;
-}
-
-body.modal-open,
-.modal-open .navbar-fixed-top,
-.modal-open .navbar-fixed-bottom {
-  margin-right: 15px;
 }
 
 .modal {
