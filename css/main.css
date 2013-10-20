@@ -2,76 +2,124 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-img {
-    max-width: 100%;
-}
-
-.container {
-    margin: 0px auto;
-    padding: 0 20px;
-}
-
-h1 {
-    font-size: 36px;
-    margin-bottom: 8px;
-}
-
-.nav-list {
-    margin-top: 16px;
-}
-
-address {
-    margin: 0;
-}
-
-.header-img {
-    margin-bottom: 20px;
-}
-
-.header hr {
-    margin: 12.5px 0 25px;
-}
-
-li {
-    padding: 1px;
-}
-
-@media (min-width: 768px) {
+@media (min-width: 991px) and (max-width: 1199px) {
     body {
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 22px;
     }
-    .header {
-	margin-top: 15px;
-    }
+
     h1 {
+	font-size: 57px;
+    }
+
+    h2 {
+	font-size: 47px;
+    }
+
+    h3 {
 	font-size: 38px;
     }
-    .nav-list {
-	margin-top: 25px;
-	margin-bottom: 0;
+
+    h4 {
+	font-size: 28px;
     }
-    li {
-	padding: 2px;
-    }
+
     .lead {
-	font-size: 25.2px;
-	margin-bottom: 25px;
+	font-size: 30px;
     }
+}
+
+@media (min-width: 1200px) {
+    body {
+	font-size: 28px;
+    }
+
     p {
-	margin: 0 0 14px;
+	margin: 0 0 32.59259259259259px;
     }
+
+    .lead {
+	font-size: 42px;
+	margin-bottom: 39.6px;
+    }
+
+    h1,
+    h2,
+    h3 {
+	margin-top: 44px;
+	margin-bottom: 29.333333333333332px;
+    }
+
+    h4,
+    h5,
+    h6 {
+	margin-top: 22px;
+	margin-bottom: 22px;
+    }
+
+    h1,
+    .h1 {
+	font-size: 72px;
+    }
+
+    h2,
+    .h2 {
+	font-size: 60px;
+    }
+
+    h3,
+    .h3 {
+	font-size: 48px;
+    }
+
+    h4,
+    .h4 {
+	font-size: 35px;
+    }
+
+    h5,
+    .h5 {
+	font-size: 28px;
+    }
+
+    h6,
+    .h6 {
+	font-size: 24px;
+    }
+
     ul,
     ol {
-	margin-bottom: 14px;
+	margin-bottom: 22px;
     }
-}
 
-.Collage{
-    padding: 4px;
-}
+    .list-inline > li {
+	padding-right: 5px;
+	padding-left: 5px;
+    }
 
-.Collage img{
-    vertical-align:bottom;
-    opacity:0;
+    dl {
+	margin-bottom: 44px;
+    }
+
+    blockquote {
+	padding: 22px 44px;
+	margin: 0 0 44px;
+	border-left: 5px solid #eeeeee;
+    }
+
+    blockquote p {
+	font-size: 35px;
+    }
+
+    blockquote.pull-right {
+	padding-right: 15px;
+	border-right: 5px solid #eeeeee;
+    }
+
+    address {
+	margin-bottom: 44px;
+    }
+
+    .table {
+	margin-bottom: 44px;
+    }
 }
