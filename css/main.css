@@ -8,6 +8,23 @@ body {
     line-height: 1.6;
 }
 
+.nav .about {
+    width: 25%;
+}
+
+.nav .portfolio {
+    width: 27%;
+    margin-left: 1%;
+}
+
+.nav .blog {
+    width: 22%;
+}
+
+.nav .contact {
+    width: 25%;
+}
+
 .nav ul{
     margin-top: 1.6em;
     padding: 0;
