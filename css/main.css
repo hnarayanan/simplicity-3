@@ -88,7 +88,7 @@ address {
 }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) {
 body {
   font-size: 24px;
 }
@@ -171,91 +171,5 @@ address {
 
 .table {
   margin-bottom: 38px;
-}
-}
-
-@media (min-width: 1200px) {
-body {
-  font-size: 28px;
-}
-
-h1,
-h2,
-h3 {
-  margin-top: 44px;
-  margin-bottom: 29.333333333333332px;
-}
-
-h4,
-h5,
-h6 {
-  margin-top: 22px;
-  margin-bottom: 22px;
-}
-
-h1,
-.h1 {
-  font-size: 72px;
-}
-
-h2,
-.h2 {
-  font-size: 60px;
-}
-
-h3,
-.h3 {
-  font-size: 48px;
-}
-
-h4,
-.h4 {
-  font-size: 35px;
-}
-
-h5,
-.h5 {
-  font-size: 28px;
-}
-
-h6,
-.h6 {
-  font-size: 24px;
-}
-
-p {
-  margin: 0 0 32.59259259259259px;
-}
-
-.lead {
-  margin-bottom: 39.6px;
-  font-size: 39px;
-}
-
-ul,
-ol {
-  margin-bottom: 22px;
-}
-
-dl {
-  margin-bottom: 44px;
-}
-
-blockquote {
-  padding: 22px 44px;
-  margin: 0 0 44px;
-  border-left: 5px solid #eeeeee;
-}
-
-blockquote p {
-  font-size: 35px;
-}
-
-address {
-  margin-bottom: 44px;
-}
-
-.table {
-  margin-bottom: 44px;
 }
 }
