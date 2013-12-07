@@ -3,40 +3,9 @@ body {
 }
 
 .nav {
-    display: block;
-    text-align: center;
-    line-height: 1.6;
-}
-
-.nav .about {
-}
-
-.nav .portfolio {
-    width: 27%;
-    margin-left: 1%;
-}
-
-.nav .blog {
-    width: 22%;
-}
-
-.nav .contact {
-}
-
-.nav ul{
     margin-top: 1.6em;
-    padding: 0;
 }
 
-.nav ul li {
-    float: left;
-    width: 25%;
-    list-style-type: none;
-}
-
-.nav a {
-    display: inline-block;
-}
 
 @media (min-width: 768px) and (max-width: 991px) {
 body {
