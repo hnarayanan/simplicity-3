@@ -2,94 +2,78 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-.nav {
-    margin-top: 1.6em;
-}
-
-
 @media (min-width: 768px) and (max-width: 991px) {
 body {
   font-size: 20px;
 }
-
 h1,
 h2,
 h3 {
   margin-top: 32px;
   margin-bottom: 21.333333333333332px;
 }
-
 h4,
 h5,
 h6 {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-
 h1,
 .h1 {
   font-size: 52px;
 }
-
 h2,
 .h2 {
   font-size: 43px;
 }
-
 h3,
 .h3 {
   font-size: 34px;
 }
-
 h4,
 .h4 {
   font-size: 25px;
 }
-
 h5,
 .h5 {
   font-size: 20px;
 }
-
 h6,
 .h6 {
   font-size: 17px;
 }
-
 p {
   margin: 0 0 23.703703703703702px;
 }
-
 .lead {
   margin-bottom: 28.8px;
   font-size: 28px;
 }
-
 ul,
 ol {
   margin-bottom: 16px;
 }
-
 dl {
   margin-bottom: 32px;
 }
-
 blockquote {
   padding: 16px 32px;
   margin: 0 0 32px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid #eee;
 }
-
 blockquote p {
   font-size: 25px;
 }
-
 address {
   margin-bottom: 32px;
 }
-
 .table {
   margin-bottom: 32px;
+}
+.navbar-brand {
+  padding: 19px 15px;
+  font-size: 25px;
+  line-height: 32px;
 }
 }
 
@@ -97,84 +81,73 @@ address {
 body {
   font-size: 24px;
 }
-
 h1,
 h2,
 h3 {
   margin-top: 38px;
   margin-bottom: 25.333333333333332px;
 }
-
 h4,
 h5,
 h6 {
   margin-top: 19px;
   margin-bottom: 19px;
 }
-
 h1,
 .h1 {
   font-size: 62px;
 }
-
 h2,
 .h2 {
   font-size: 51px;
 }
-
 h3,
 .h3 {
   font-size: 41px;
 }
-
 h4,
 .h4 {
   font-size: 30px;
 }
-
 h5,
 .h5 {
   font-size: 24px;
 }
-
 h6,
 .h6 {
   font-size: 21px;
 }
-
 p {
   margin: 0 0 28.148148148148145px;
 }
-
 .lead {
   margin-bottom: 34.2px;
   font-size: 33px;
 }
-
 ul,
 ol {
   margin-bottom: 19px;
 }
-
 dl {
   margin-bottom: 38px;
 }
-
 blockquote {
   padding: 19px 38px;
   margin: 0 0 38px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid #eee;
 }
-
 blockquote p {
   font-size: 30px;
 }
-
 address {
   margin-bottom: 38px;
 }
-
 .table {
   margin-bottom: 38px;
+}
+.navbar-brand {
+  padding: 16px 15px;
+  font-size: 30px;
+  line-height: 38px;
 }
 }
